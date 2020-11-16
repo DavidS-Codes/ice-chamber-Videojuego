@@ -109,6 +109,8 @@ public class PlayerMovement : MonoBehaviour
             raycastHits[1] = Physics2D.Raycast(checkPoints[2].position, Vector2.down, checkRadius[1], layers);
         }
 
+        Debug.log(canJump);
+
         
     }
 }
