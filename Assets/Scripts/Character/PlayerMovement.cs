@@ -15,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
     //Limit Jump
     // OverlapCircle , Raycast (Hitscan Weapons)
     [Header("Jump Mechanic")]
-    public bool jumpSelector = false;
-    public bool canJump = false;
+    //public bool jumpSelector = false;
+    //public bool canJump = false;
     public Transform[] checkPoints;
     public float[] checkRadius;
     public LayerMask layers;
@@ -53,28 +53,28 @@ public class PlayerMovement : MonoBehaviour
 
         //transform.position += new Vector3(movX, movY, 0f) * Time.deltaTime;
 
-        if (!jumpSelector)
-        {
-            if (groundCollider != null)
-            {
-                canJump = true;
-            }
-            else
-            {
-                canJump = false;
-            }
-        }
-        else
-        {
-            if (raycastHits[0] || raycastHits[1])
-            {
-                canJump = true;
-            }
-            else
-            {
-                canJump = false;
-            }
-        }
+        //if (!jumpSelector)
+        //{
+        //    if (groundCollider != null)
+        //    {
+        //        canJump = true;
+        //    }
+        //    else
+        //    {
+        //        canJump = false;
+        //    }
+        //}
+        //else
+        //{
+        //    if (raycastHits[0] || raycastHits[1])
+        //    {
+        //        canJump = true;
+        //    }
+        //    else
+        //    {
+        //        canJump = false;
+        //    }
+        //}
 
 
         
@@ -96,20 +96,18 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = forceVector;
         }
 
-        if (canJump && jump)
-            rb.AddForce(Vector2.up * jumpMultiplier, ForceMode2D.Impulse);
+        //if (canJump && jump)
+        //    rb.AddForce(Vector2.up * jumpMultiplier, ForceMode2D.Impulse);
 
-        if (!jumpSelector)
-        {
-            groundCollider = Physics2D.OverlapCircle(checkPoints[0].position, checkRadius[0], layers);
-        }
-        else
-        {
-            raycastHits[0] = Physics2D.Raycast(checkPoints[1].position, Vector2.down, checkRadius[1], layers);
-            raycastHits[1] = Physics2D.Raycast(checkPoints[2].position, Vector2.down, checkRadius[1], layers);
-        }
-
-        Debug.log(canJump);
+        //if (!jumpSelector)
+        //{
+        //    groundCollider = Physics2D.OverlapCircle(checkPoints[0].position, checkRadius[0], layers);
+        //}
+        //else
+        //{
+        //    raycastHits[0] = Physics2D.Raycast(checkPoints[1].position, Vector2.down, checkRadius[1], layers);
+        //    raycastHits[1] = Physics2D.Raycast(checkPoints[2].position, Vector2.down, checkRadius[1], layers);
+        //}
 
         
     }
