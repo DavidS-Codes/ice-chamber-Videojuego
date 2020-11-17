@@ -15,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
     //Limit Jump
     // OverlapCircle , Raycast (Hitscan Weapons)
     [Header("Jump Mechanic")]
-    //public bool jumpSelector = false;
-    //public bool canJump = false;
+    public bool jumpSelector = false;
+    public bool canJump = false;
     public Transform[] checkPoints;
     public float[] checkRadius;
     public LayerMask layers;
@@ -75,11 +75,6 @@ public class PlayerMovement : MonoBehaviour
         //        canJump = false;
         //    }
         //}
-
-
-        
-        
-        
         
     }
 
@@ -93,22 +88,45 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             Vector2 forceVector = new Vector2(movX, 0f) * forceMultiplier;
+            
             rb.velocity = forceVector;
         }
 
-        //if (canJump && jump)
-        //    rb.AddForce(Vector2.up * jumpMultiplier, ForceMode2D.Impulse);
+       
 
-        //if (!jumpSelector)
-        //{
-        //    groundCollider = Physics2D.OverlapCircle(checkPoints[0].position, checkRadius[0], layers);
-        //}
-        //else
-        //{
-        //    raycastHits[0] = Physics2D.Raycast(checkPoints[1].position, Vector2.down, checkRadius[1], layers);
-        //    raycastHits[1] = Physics2D.Raycast(checkPoints[2].position, Vector2.down, checkRadius[1], layers);
-        //}
 
-        
+        if (!jumpSelector)
+        {
+            groundCollider = Physics2D.OverlapCircle(checkPoints[0].position, checkRadius[0], layers);
+        }
+        else
+        {
+            raycastHits[0] = Physics2D.Raycast(checkPoints[1].position, Vector2.down, checkRadius[1], layers);
+            raycastHits[1] = Physics2D.Raycast(checkPoints[2].position, Vector2.down, checkRadius[1], layers);
+        }
+
+        if (canJump && jump)
+        {
+            rb.AddForce(Vector2.up * jumpMultiplier, ForceMode2D.Impulse);
+            anim.SetBool("Jump", true);
+            canJump = false;
+
+        }
+
+
+
+
+
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            canJump = true;
+            anim.SetBool("Jump", false);
+            rb.velocity = Vector2.zero;
+        }
+
     }
 }

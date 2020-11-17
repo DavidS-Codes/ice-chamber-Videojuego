@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: b86d0e26dcd1be244af5e5d779ea9cdb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5288447188056707586
+    second: Character_jump_0
+  - first:
+      213: 7901892613084875400
+    second: Character_jump_1
+  - first:
+      213: 2234969516039671118
+    second: Character_jump_2
+  - first:
+      213: -9048297528535354
+    second: Character_jump_3
+  - first:
+      213: 7158231337303083009
+    second: Character_jump_4
+  - first:
+      213: 2759958088592961446
+    second: Character_jump_5
+  - first:
+      213: 6952832969674400594
+    second: Character_jump_6
+  - first:
+      213: -2251441639410877971
+    second: Character_jump_7
+  - first:
+      213: -5094978285748643537
+    second: Character_jump_0
+  - first:
+      213: -4539026635396526434
+    second: Character_jump_1
+  - first:
+      213: -6822165603230635744
+    second: Character_jump_2
+  - first:
+      213: -5309783825691984250
+    second: Character_jump_3
+  - first:
+      213: -5218611373197840498
+    second: Character_jump_4
+  - first:
+      213: -5853606330749271263
+    second: Character_jump_5
+  - first:
+      213: 3804523294619983486
+    second: Character_jump_6
+  - first:
+      213: 5299097200286006288
+    second: Character_jump_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +80,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -46,7 +94,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,7 +159,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Character_jump_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 14
+        width: 41
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f299f935e300b49b0800000000000000
+      internalID: -5094978285748643537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_jump_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 12
+        width: 42
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e472be2532201c0800000000000000
+      internalID: -4539026635396526434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_jump_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 9
+        width: 45
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029ac8c778cc251a0800000000000000
+      internalID: -6822165603230635744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_jump_3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 7
+        width: 37
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68eb3833ebbdf46b0800000000000000
+      internalID: -5309783825691984250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_jump_4
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 7
+        width: 29
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8faabffa94c397b0800000000000000
+      internalID: -5218611373197840498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_jump_5
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 7
+        width: 37
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12346b05e00d3cea0800000000000000
+      internalID: -5853606330749271263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_jump_6
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 9
+        width: 45
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ed58b77c16cc430800000000000000
+      internalID: 3804523294619983486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_jump_7
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 12
+        width: 42
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c705de3dc2a8940800000000000000
+      internalID: 5299097200286006288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
