@@ -331,14 +331,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822838287aec82b4e97a6ffe21ee3e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camara: {fileID: 519420028}
-  destino: {fileID: 0}
-  posicionCamara: {x: 0, y: 0, z: 0}
-  posicionDestino: {x: 0, y: 0, z: 0}
-  transformDestino: {fileID: 0}
-  UsarTiempo: 0
-  Tiempo: 0
-  Velocidad: 0
+  TransformDestino: {fileID: 847553012}
+  UsarTiempo: 1
+  Tiempo: 50
+  Velocidad: 60
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -529,7 +525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847553011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.6, y: 69.2, z: 0}
+  m_LocalPosition: {x: -4.6, y: 69.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
