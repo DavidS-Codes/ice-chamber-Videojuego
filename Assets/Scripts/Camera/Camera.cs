@@ -9,16 +9,16 @@ public class Camera : MonoBehaviour
     public float Tiempo; //Tiempo en recorrer la distancia
     public float Velocidad; //A que velocidad //Solo se usa si UsarTiempo esta activo
 
-    float rateTiempo;
-    float rateVelocity;
-    float rate; //El rate o factor movimiento que realmente se utilizara
-    float t = 0.0f; //ayuda
+    public float rateTiempo;
+    public float rateVelocity;
+    public float rate; //El rate o factor movimiento que realmente se utilizara
+    public float t = 0.0f; //ayuda
 
-    Vector3 startPos;
+    public Vector3 startPos;
 
     void Start()
     {
-        startPos = transform.position; //Mi punto inicial del personaje
+        startPos = transform.position; //Mi punto inicial de la camara
         if (UsarTiempo)
         {
             float rateTiempo = 1f / Tiempo; //Calculamos cuanto nos moveremos para comprir la distancia siempre en el mismo tiempo

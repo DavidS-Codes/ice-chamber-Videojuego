@@ -333,7 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransformDestino: {fileID: 847553012}
   UsarTiempo: 1
-  Tiempo: 50
+  Tiempo: 55
   Velocidad: 60
 --- !u!20 &519420031
 Camera:
