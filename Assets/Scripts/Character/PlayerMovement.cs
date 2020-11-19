@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -152,5 +153,15 @@ public class PlayerMovement : MonoBehaviour
     void shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    public void destroyPlayer() {
+
+        Destroy(gameObject.transform.root.gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.LoadScene(0); 
     }
 }

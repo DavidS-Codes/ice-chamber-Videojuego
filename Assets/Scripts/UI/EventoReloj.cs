@@ -28,6 +28,6 @@ public class EventoReloj : MonoBehaviour
 
     void tiempoFinalizado() {
        // GetComponent<SpriteRenderer>().color = Color.red;
-        SceneManager.LoadScene(0);
+       // SceneManager.LoadScene(0);
     }
 }
