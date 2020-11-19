@@ -819,8 +819,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 995731347
-  m_SortingLayer: 2
+  m_SortingLayerID: -1083184975
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -3048,7 +3048,7 @@ MonoBehaviour:
   jump: 0
   xKeyboard: 0
   forceMultiplier: 11
-  jumpMultiplier: 8
+  jumpMultiplier: 15
   jumpSelector: 1
   canJump: 1
   checkPoints:
@@ -3062,7 +3062,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   firePoint: {fileID: 1360001218}
-  bulletPrefab: {fileID: 8934402834565072806, guid: 7a10e5cf7874e61489328ad6c0e03c3b, type: 3}
+  bulletPrefab: {fileID: 3216111564764426586, guid: 339de829fab9b6344a75f302869ef031, type: 3}
 --- !u!95 &1736813785 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7327395596062959948, guid: 8a7f14c74277b2a40bc8d5c4682ed0ef, type: 3}
