@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Animator anim;
-    public bool flag, jump;
+    public bool flag, jump, xKeyboard;
     private float movX, movY;
 
 
@@ -20,6 +20,11 @@ public class PlayerMovement : MonoBehaviour
     public Transform[] checkPoints;
     public float[] checkRadius;
     public LayerMask layers;
+
+    [Header("Attack Mechanic")]
+    public Transform firePoint;
+    public GameObject bulletPrefab;
+
 
     private Collider2D groundCollider;
     private RaycastHit2D[] raycastHits = new RaycastHit2D[2];
@@ -37,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         movX = Input.GetAxis("Horizontal");
         movY = Input.GetAxis("Vertical");
         jump = Input.GetButtonDown("Jump");
+        xKeyboard = Input.GetKey(KeyCode.X);
 
         //Debug.Log(movY);
 
@@ -44,13 +50,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (movX < 0)
         {
-            transform.localScale = new Vector3(-1f,1f,1f);
+            transform.root.localScale = new Vector3(-1f, 1f, 1f);
+            //GameObject.FindGameObjectWithTag("weapon").transform.Rotate(0f, 180f, 0f);
         }
         else
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.root.localScale = new Vector3(1f, 1f, 1f);
+            //GameObject.FindGameObjectWithTag("weapon").transform.Rotate(0f, 0, 0f);
         }
-
         //transform.position += new Vector3(movX, movY, 0f) * Time.deltaTime;
 
         //if (!jumpSelector)
@@ -75,7 +82,9 @@ public class PlayerMovement : MonoBehaviour
         //        canJump = false;
         //    }
         //}
-        
+       
+
+
     }
 
     private void FixedUpdate()
@@ -113,6 +122,16 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+        if (xKeyboard)
+        {
+            anim.SetBool("Attack", true);
+        }
+        else
+        {
+            anim.SetBool("Attack", false);
+        }
+
+
 
 
 
@@ -128,5 +147,10 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
         }
 
+    }
+
+    void shoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
