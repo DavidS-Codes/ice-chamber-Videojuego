@@ -4,30 +4,18 @@ using UnityEngine;
 
 public class LimitCamera : MonoBehaviour
 {
-    //public GameObject camara;
-    //public Rigidbody2D rb;
-    //public GameObject camara;
-
-
-
     // Start is called before the first frame update
-    void Start()
-    {
-        //camara = ;
+    void Start(){
 
     }
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
             
     }
-    private void OnTriggerEnter2D(Collider2D colider) {
+    private void OnTriggerEnter2D(Collider2D colider){
 
-        if(colider.gameObject.transform.root.gameObject.CompareTag("Player"))
-        {
+        if(colider.gameObject.transform.root.gameObject.CompareTag("Player")){
             colider.gameObject.transform.root.gameObject.GetComponentInChildren<PlayerMovement>().destroyPlayer();
         }
-
-
-     }
+    }
 }

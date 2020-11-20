@@ -132,11 +132,6 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("Attack", false);
         }
 
-
-
-
-
-
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -155,13 +150,13 @@ public class PlayerMovement : MonoBehaviour
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
-    public void destroyPlayer() {
+    public void destroyPlayer(){
 
         Destroy(gameObject.transform.root.gameObject);
     }
 
     private void OnDestroy()
-    {
+    {   //Cargar escena de  GAME OVER    
         SceneManager.LoadScene(0); 
     }
 }
