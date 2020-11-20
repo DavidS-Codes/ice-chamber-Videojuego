@@ -157,6 +157,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDestroy()
     {   //Cargar escena de  GAME OVER    
-        SceneManager.LoadScene(0); 
-    }
+        SceneManager.LoadScene(0);
+    }    
 }

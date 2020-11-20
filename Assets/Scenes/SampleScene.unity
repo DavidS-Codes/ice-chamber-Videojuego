@@ -480,7 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransformDestino: {fileID: 847553012}
   UsarTiempo: 1
-  Tiempo: 55
+  Tiempo: 120
   Velocidad: 60
   rateTiempo: 0
   rateVelocity: 0
@@ -2877,7 +2877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a238dba6430b4f42ad7189b0de9c631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoInicial: 5
+  tiempoInicial: 30
   escalaTiempo: -1
 --- !u!114 &1203356115
 MonoBehaviour:
