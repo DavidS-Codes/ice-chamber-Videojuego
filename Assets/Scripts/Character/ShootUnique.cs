@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class ShootUnique : MonoBehaviour
 {
@@ -10,34 +9,16 @@ public class ShootUnique : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //rb.velocity = transform.right * speed;
         //The direction to shoot the bullet
-        //Vector3 pos = rb.transform.up * speed;
-        Vector3 pos = new Vector3( 1 * speed, 1*speed,0);
+        Vector3 pos = rb.transform.forward * speed;
         //Shoot
         rb.velocity = pos;
     }
 
     // Update is called once per frame
-   void OnCollisionEnter2D(Collision2D coll)
-
+   void OnTriggerEnter2D()
     {
-
         Destroy(gameObject);
-        Tilemap tilemap = coll.gameObject.GetComponent<Tilemap>();
-        //Debug.Log(coll.gameObject);
-        foreach (ContactPoint2D hit in coll.contacts)
-        {
-            Vector2 hitPoint = hit.point;
-            //Debug.Log(hit.collider.transform.name);
-            //Debug.Log(hitPoint);
-            //Debug.Log(tilemap.WorldToCell(hitPosition));
-            tilemap.SetTile(tilemap.WorldToCell(hitPoint), null);
-        }
-
-
     }
-
-
-    
 }
