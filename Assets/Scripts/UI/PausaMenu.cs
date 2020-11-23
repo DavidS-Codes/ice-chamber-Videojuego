@@ -47,6 +47,6 @@ public class PausaMenu : MonoBehaviour
     }
 
     public void EmpezarDeNuevo() {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(1);
     }
 }
