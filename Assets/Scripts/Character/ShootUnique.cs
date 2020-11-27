@@ -22,12 +22,14 @@ public class ShootUnique : MonoBehaviour
     {
         Destroy(gameObject);
          Tilemap tilemap = coll.gameObject.GetComponent<Tilemap>();
+         UnityEngine.Debug.Log(coll.gameObject.name);
+
         //Debug.Log(coll.gameObject);
         foreach (ContactPoint2D hit in coll.contacts)
         {
             Vector2 hitPoint = hit.point;
             //Debug.Log(hit.collider.transform.name);
-            Debug.Log(hitPoint);
+            UnityEngine.Debug.Log(hitPoint);
             //Debug.Log(tilemap.WorldToCell(hitPosition));
             tilemap.SetTile(tilemap.WorldToCell(hitPoint), null);
         }
