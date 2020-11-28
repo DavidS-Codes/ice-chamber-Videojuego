@@ -155,8 +155,8 @@ public class PlayerMovement : MonoBehaviour
         Destroy(gameObject.transform.root.gameObject);
     }
 
-    private void OnDestroy()
-    {   //Cargar escena de  GAME OVER    
-        SceneManager.LoadScene(0);
-    }    
+    //private void OnDestroy()
+    //{   //Cargar escena de  GAME OVER    
+    //   SceneManager.LoadScene(0);
+    //}    
 }
