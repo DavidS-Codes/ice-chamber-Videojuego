@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class EventoReloj : MonoBehaviour
 {
     private void OnEnable() {
-        Reloj.llegarCero += tiempoFinalizado;
+        Reloj.llegarCero += tiempoFinalizado;   
     }
 
     private void OnDisable() {
@@ -27,7 +27,6 @@ public class EventoReloj : MonoBehaviour
     }
 
     void tiempoFinalizado() {
-       // GetComponent<SpriteRenderer>().color = Color.red;
         SceneManager.LoadScene(0);
     }
 }

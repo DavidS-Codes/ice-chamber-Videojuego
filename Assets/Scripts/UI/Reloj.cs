@@ -12,13 +12,12 @@ public class Reloj : MonoBehaviour
     [Range(-10.0f, 10.0f)]
 
     public float escalaTiempo = 1;
-    // Start is called before the first frame update
 
     private Text textoTiempo;
     private float tiempoFrameConTimeSale = 0f;
     private float tiempoMostrarEnSegundos = 0f;
-    private float escalaTiempoPausado, escalaTiempoInicial;
-  //  private bool estaPausado = false;
+    private float escalaTiempoPausado, escalaTiempoInicial; //guardar tiempo al pausar
+
     private bool eventoTiempoCero = false;
 
 
@@ -29,19 +28,20 @@ public class Reloj : MonoBehaviour
 
     void Start()
     {
-        escalaTiempoInicial = escalaTiempo;
-
-        textoTiempo = GetComponent<Text>();
-
-        tiempoMostrarEnSegundos = tiempoInicial;
-
-        ActualizarReloj(tiempoInicial);
+        escalaTiempoInicial = escalaTiempo; //guardar escala de tiempo
+        textoTiempo = GetComponent<Text>(); //Obtener el componente texto del canvas
+        
+        //Variable que acumula los tiempos del frame con el tiempo inicial 
+        tiempoMostrarEnSegundos = tiempoInicial; 
+        ActualizarReloj(tiempoInicial); //El tiempo transcurido se debe ir modificando
     }
-
+        
     // Update is called once per frame
     void Update()
-    {
-        tiempoFrameConTimeSale = Time.deltaTime * escalaTiempo;
+    {   //tiempo de cada frame considerando la escala de tiempo
+        tiempoFrameConTimeSale = Time.deltaTime * escalaTiempo; 
+
+        //Va acumulando el tiempo transcurrido para luego mostrarlo en el reloj
         tiempoMostrarEnSegundos += tiempoFrameConTimeSale;
         ActualizarReloj(tiempoMostrarEnSegundos);
 
@@ -54,23 +54,24 @@ public class Reloj : MonoBehaviour
         // int milisegundos = 0;
         string textoDelReloj;
 
+        //Validar que el tiempo no sea negativo
         if (tiempoEnSegundos <= 0 && !eventoTiempoCero)
         {
-
             if (llegarCero != null)
             {
                 llegarCero();
             }
             eventoTiempoCero = true;
-
         }
 
         if (tiempoEnSegundos < 0) tiempoEnSegundos = 0;
 
+        //calcular minutos y segundos
         minutos = (int)tiempoEnSegundos / 60;
         segundos = (int)tiempoEnSegundos % 60;
         //milisegundos = (int)tiempoEnSegundos / 1000;
 
+        //Convertir los minutos y segundos a string para poderlos visualizar
         textoDelReloj = minutos.ToString("00") + ":" + segundos.ToString("00"); //+ ":" + milisegundos.ToString("00");
 
         //Actualiza el elemento  de texto de UI con la cadena de caracteres

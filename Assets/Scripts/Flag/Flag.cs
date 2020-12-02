@@ -16,8 +16,8 @@ public class Flag : MonoBehaviour
         }
     }
 
-    void finalizarJuego()
-    {
-        SceneManager.LoadScene("Scene2");
-    }
+    //void finalizarJuego()
+    //{
+    //    SceneManager.LoadScene("Scene2");
+    //}
 }
